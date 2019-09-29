@@ -84,6 +84,6 @@ object BackRepo {
                         }
                     }
                 }
-                .retryWhen { it.delay(5, TimeUnit.SECONDS) }
+                .retryWhen { it.delay(1, TimeUnit.SECONDS) }
     }
 }
