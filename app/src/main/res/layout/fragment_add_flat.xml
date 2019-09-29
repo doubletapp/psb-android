@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                android:text="@string/flat"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/city_hint"
+                android:visibility="invisible"
+                android:layout_marginTop="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mandatory"
+                    />
+                <TextView
+                    android:textColor="@color/brown_grey"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/city_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:hint="@string/city"
+                android:singleLine="true"
+                android:backgroundTint="@color/grey_light"
+                />
+
+            <LinearLayout
+                android:id="@+id/address_hint"
+                android:visibility="invisible"
+                android:layout_marginTop="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mandatory"
+                    />
+                <TextView
+                    android:textColor="@color/brown_grey"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/address_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:hint="@string/address"
+                android:singleLine="true"
+                android:backgroundTint="@color/grey_light"
+                />
+
+            <LinearLayout
+                android:id="@+id/cost_hint"
+                android:visibility="invisible"
+                android:layout_marginTop="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mandatory"
+                    />
+                <TextView
+                    android:textColor="@color/brown_grey"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cost2"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cost_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:hint="@string/cost2"
+                android:backgroundTint="@color/grey_light"
+                />
+
+            <LinearLayout
+                android:id="@+id/state_hint"
+                android:visibility="invisible"
+                android:layout_marginTop="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mandatory"
+                    />
+                <TextView
+                    android:textColor="@color/brown_grey"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/path_drop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/state_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black2"
+                    android:textSize="16sp"
+                    android:text="@string/state"
+                    android:backgroundTint="@color/grey_light"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/path_5"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date_leave_hint"
+                android:visibility="invisible"
+                android:textColor="@color/brown_grey"
+                android:layout_marginTop="27dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_leave"
+                />
+
+            <EditText
+                android:id="@+id/date_leave_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:hint="@string/date_leave"
+                android:backgroundTint="@color/grey_light"
+                android:focusable="false"
+                android:longClickable="false"
+                android:inputType="none"
+                android:editable="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                android:text="@string/renter"
+                />
+
+            <TextView
+                android:id="@+id/fio_hint"
+                android:visibility="invisible"
+                android:textColor="@color/brown_grey"
+                android:layout_marginTop="27dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fio"
+                />
+
+            <EditText
+                android:id="@+id/fio_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:hint="@string/fio"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:backgroundTint="@color/grey_light"
+                />
+
+            <TextView
+                android:id="@+id/birth_hint"
+                android:visibility="invisible"
+                android:textColor="@color/brown_grey"
+                android:layout_marginTop="27dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birth_date"
+                />
+
+            <EditText
+                android:id="@+id/birth_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:hint="@string/birth_date"
+                android:inputType="none"
+                android:focusable="false"
+                android:longClickable="false"
+                android:editable="false"
+                android:backgroundTint="@color/grey_light"
+                />
+
+            <TextView
+                android:id="@+id/passp_hint"
+                android:visibility="invisible"
+                android:textColor="@color/brown_grey"
+                android:layout_marginTop="27dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/passp"
+                />
+
+            <EditText
+                android:id="@+id/passp_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:hint="@string/passp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:backgroundTint="@color/grey_light"
+                />
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="true"
+                android:textColor="@android:color/white"
+                android:text="@string/add"
+                android:background="@drawable/bg_vk_auth_button"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

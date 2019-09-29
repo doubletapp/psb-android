@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/main_group_features">
+
+        <item
+            android:id="@+id/main_menu_my_bank"
+            android:icon="@drawable/ic_home"
+            android:title="Мой банк" />
+
+        <item
+            android:id="@+id/main_menu_payments"
+            android:icon="@drawable/ic_card"
+            android:title="Платежи и переводы" />
+
+        <item
+            android:id="@+id/main_menu_operations_history"
+            android:icon="@drawable/ic_history"
+            android:title="История операций" />
+
+        <item
+            android:id="@+id/main_menu_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Настройки" />
+    </group>
+
+    <group
+        android:id="@+id/main_group_logout"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/main_menu_logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Выйти" />
+    </group>
+</menu>

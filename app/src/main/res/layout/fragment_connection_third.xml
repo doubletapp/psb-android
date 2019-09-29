@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/connection_third_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="5dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/connection_third_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_connection_third" />
+
+    <TextView
+        android:id="@+id/connection_third_save"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_vk_auth_button"
+        android:textColor="@android:color/white"
+        android:text="@string/connection_third_save_text"/>
+</LinearLayout>

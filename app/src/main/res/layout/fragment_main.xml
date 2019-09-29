@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_npd_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/main_npd_background"
+                        android:layout_width="0dp"
+                        android:layout_height="115dp"
+                        android:scaleType="centerCrop"
+                        android:scaleX="1.35"
+                        android:scaleY="1.35"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_npd_card"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/main_npd_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Работай на себя!"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/main_npd_subtitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/main_npd_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="По закону и без бюрократии"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/main_npd_title" />
+
+                    <View
+                        android:id="@+id/main_npd_clickable_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/main_cards_text"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Карты"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_npd_card" />
+
+            <ImageView
+                android:id="@+id/main_cards_arrow"
+                android:layout_width="12dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/path_5"
+                app:layout_constraintBottom_toBottomOf="@id/main_cards_text"
+                app:layout_constraintEnd_toEndOf="@id/main_cards_text"
+                app:layout_constraintTop_toTopOf="@id/main_cards_text"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/main_cards_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/grey_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_cards_text" />
+
+            <TextView
+                android:id="@+id/main_accounts_text"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Счета"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_cards_separator" />
+
+            <ImageView
+                android:id="@+id/main_accounts_arrow"
+                android:layout_width="12dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/path_5"
+                app:layout_constraintBottom_toBottomOf="@id/main_accounts_text"
+                app:layout_constraintEnd_toEndOf="@id/main_accounts_text"
+                app:layout_constraintTop_toTopOf="@id/main_accounts_text"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/main_accounts_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/grey_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_accounts_text" />
+
+            <TextView
+                android:id="@+id/main_vclads_text"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Вклады"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_accounts_separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Открыть вклад"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/main_vclads_text"
+                app:layout_constraintEnd_toEndOf="@id/main_vclads_text"
+                app:layout_constraintTop_toTopOf="@id/main_vclads_text" />
+
+            <View
+                android:id="@+id/main_vclads_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/grey_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_vclads_text" />
+
+            <TextView
+                android:id="@+id/main_credit_text"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Кредиты"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_vclads_separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Взять кредит"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/main_credit_text"
+                app:layout_constraintEnd_toEndOf="@id/main_credit_text"
+                app:layout_constraintTop_toTopOf="@id/main_credit_text" />
+
+            <View
+                android:id="@+id/main_credit_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/grey_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_credit_text" />
+
+            <TextView
+                android:id="@+id/main_goals_text"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Цели"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_credit_separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Создать цель"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/main_goals_text"
+                app:layout_constraintEnd_toEndOf="@id/main_goals_text"
+                app:layout_constraintTop_toTopOf="@id/main_goals_text" />
+
+            <View
+                android:id="@+id/main_goals_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/grey_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_goals_text" />
+
+            <TextView
+                android:id="@+id/main_npd_text"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|start"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Работа на себя"
+                android:textColor="@color/black2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_goals_separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Создать цель"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/main_npd_text"
+                app:layout_constraintEnd_toEndOf="@id/main_npd_text"
+                app:layout_constraintTop_toTopOf="@id/main_npd_text" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_npd_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabCustomSize="70dp"
+        app:layout_anchor="@id/main_content"
+        app:layout_anchorGravity="bottom|end|right"
+        app:layout_behavior=".flats_arenda.ScrollAwareFABBehavior"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/ic_invalid_name_3" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

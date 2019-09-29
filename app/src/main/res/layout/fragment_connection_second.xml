@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/phone_label"
+        android:visibility="invisible"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/brown_grey"
+        android:letterSpacing="0.05"
+        android:text="@string/phone_number"
+        />
+
+    <EditText
+        android:id="@+id/phone_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        android:drawableStart="@drawable/loc"
+        android:drawablePadding="20dp"
+        android:inputType="phone"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:background="@android:color/transparent"
+        android:maxLength="11"
+        android:hint="@string/phone_number"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="25dp"
+        android:background="#f4f4f4"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#9c9c9c"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sms_note"
+        />
+
+    <TextView
+        android:id="@+id/region_label"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/brown_grey"
+        android:letterSpacing="0.05"
+        android:text="@string/region_activity"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/region_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/region_img"
+            android:id="@+id/region_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:drawableStart="@drawable/loc"
+            android:drawablePadding="20dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="@string/region_activity"
+            />
+
+
+        <ImageView
+            android:id="@+id/region_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:src="@drawable/path_5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/grey_light"/>
+
+    <TextView
+        android:id="@+id/select_label"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/brown_grey"
+        android:letterSpacing="0.05"
+        android:text="@string/activity_variants"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/select_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/select_img"
+            android:id="@+id/select_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:drawableStart="@drawable/briefcase"
+            android:drawablePadding="20dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="@string/activity_variants"
+            />
+
+        <ImageView
+            android:id="@+id/select_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:src="@drawable/path_5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/grey_light"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/check_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/agree_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:linksClickable="true"
+            android:text="@string/agree_with_agrrement"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:enabled="true"
+        android:text="@string/register"
+        android:background="@drawable/bg_vk_auth_button"/>
+
+</LinearLayout>

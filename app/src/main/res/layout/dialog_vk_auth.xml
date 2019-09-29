@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/vk_auth_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Вконтакте"
+            android:textAllCaps="true"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/vk_auth_explanation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="33dp"
+            android:gravity="center"
+            android:text="Привяжите ваш профиль Вконтакте и получите повышенный кэшбек."
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vk_auth_title"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/vk_auth_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_vk_auth_button"
+            android:drawableStart="@drawable/ic_vk"
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Подключить"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vk_auth_explanation"
+            tools:ignore="HardcodedText" />
+
+        <ProgressBar
+            android:id="@+id/vk_auth_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/vk_auth_connect"
+            app:layout_constraintEnd_toEndOf="@id/vk_auth_connect"
+            app:layout_constraintTop_toTopOf="@id/vk_auth_connect"
+            app:layout_constraintBottom_toBottomOf="@id/vk_auth_connect"/>
+
+        <TextView
+            android:id="@+id/vk_auth_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="31dp"
+            android:background="@drawable/bg_vk_auth_button_2"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Не надо"
+            android:textAllCaps="true"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/vk_auth_connect"
+            app:layout_constraintStart_toStartOf="@id/vk_auth_connect"
+            app:layout_constraintTop_toBottomOf="@id/vk_auth_connect"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
